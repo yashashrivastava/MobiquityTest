@@ -27,4 +27,11 @@ public class Blog {
                 get("/posts");
     }
 
+    public Response getComments() {
+        return given().
+                baseUri(endpointUrl).
+                when().
+                get("/comments");
+    }
+
 }
